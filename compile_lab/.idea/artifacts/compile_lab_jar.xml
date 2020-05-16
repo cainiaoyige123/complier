@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="compile_lab:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/compile_lab_jar</output-path>
+    <root id="archive" name="compile_lab.jar">
+      <element id="module-output" name="compile_lab" />
+    </root>
+  </artifact>
+</component>

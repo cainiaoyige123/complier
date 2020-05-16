@@ -1,0 +1,23 @@
+分为两个模块：
+exec：内为可执行文件部分(测试程序包含在内)
+src：内为源代码部分
+
+环境需求：需要jdk1.8或者jre1.8运行环境
+下面主要说可执行文件的运行：
+    进入exec目录,目录内有两个jar,
+        parser1.jar为词法解析程序jar
+        parser2.jar为语法解析程序jar
+
+        老师说不测试词法错误,所以不包含词法错误测试程序
+        exec目录下有三个文件夹right,error1,error2分别代表无误的测试程序,1号错误程序,2号测试程序
+        对应生成的所有dyd,err,var,pro文件都在对应的文件夹内
+
+        下面以正确无误的测试程序为例：
+        首先进入exec目录下
+        1.java -jar parser1.jar right/right.pas   //词法解析
+        2.cd right/                               //进入right目录查看生成的dyd文件和错误信息文件err1
+        3.cd ..
+        4.java -jar parser2.jar right/right.dyd   //语法解析
+        5.cd right/                               //进入right目录查看生成的err文件,var和pro文件
+
+        两种错误测试程序操作类似类似,只需将以上命令中的right全部改为error1或者error2即可
